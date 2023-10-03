@@ -1,0 +1,79 @@
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+$esas: #900;
+
+$custom-colors: (
+  "esas": $esas
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 400px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+$zindex-levels: (
+  n1: -1,
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3,
+  4: 4
+);
+
+$input-border-radius: 0;
+
+$input-focus-border-color: $esas;
+
+$spacers: (
+  0: 0,
+  1: 2px,
+  2: 4px,
+  3: 8px,
+  
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+$greens: (
+  "green-100": red,
+  "green-200": $green-200,
+  "green-300": $green-300,
+  "green-400": $green-400,
+  "green-500": $green-500,
+  "green-600": $green-600,
+  "green-700": $green-700,
+  "green-800": $green-800,
+  "green-900": $green-900
+);
+
+
+
+$all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "color": map-merge(
+      map-get($utilities, "color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "color"), "values"),
+          (
+            $all-colors
+          ),
+        ),
+      ),
+    ),
+  )
+);
+
+@import "../../node_modules/bootstrap/scss/utilities/api";
+@import "./custom.sass"
