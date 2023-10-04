@@ -1,63 +1,49 @@
 
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
+// @import "../../node_modules/bootstrap/scss/functions";
+// @import "../../node_modules/bootstrap/scss/variables";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
-$esas: #900;
+$primary: #0A157A;
+$font-family-base: Inter, sans-serif;
 
-$custom-colors: (
-  "esas": $esas
-);
 
-$theme-colors: map-merge($theme-colors, $custom-colors);
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 400px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
-);
 
-$zindex-levels: (
-  n1: -1,
-  0: 0,
-  1: 1,
-  2: 2,
-  3: 3,
-  4: 4
-);
-
-$input-border-radius: 0;
-
-$input-focus-border-color: $esas;
 
 $spacers: (
   0: 0,
   1: 2px,
   2: 4px,
   3: 8px,
-  4: 16px
+  4: 16px,
+  5: 30px,
+  6: 60px
   
 );
 
+$btn-padding-y-lg: 16px;
+$btn-padding-x-lg: 24px;
+$btn-border-radius: 8px;
+$btn-font-size-lg: 1rem;
+$btn-line-height: 24px;
+
+$card-border-radius: 12px;
+
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-$greens: (
-  "green-100": red,
-  "green-200": $green-200,
-  "green-300": $green-300,
-  "green-400": $green-400,
-  "green-500": $green-500,
-  "green-600": $green-600,
-  "green-700": $green-700,
-  "green-800": $green-800,
-  "green-900": $green-900
+$neutral50: #FBFBFB;
+$gray5: #A8A6AC;
+$gray6: #625F68;
+$gray7: #2A282F;
+$neutrals: (
+	"neutral-50":$neutral50,
+	"neutral-600":#74768F,
+	"neutral-900":#252630,
+
 );
 
 
-
-$all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans);
+$all-colors: map-merge-multiple( $neutrals, $blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans);
 
 $utilities: map-merge(
   $utilities,
